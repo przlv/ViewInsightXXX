@@ -1,0 +1,10 @@
+@import url('fonts.css');
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+

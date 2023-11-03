@@ -1,0 +1,55 @@
+header {
+    width: 100% !important;
+    height: 80px;
+    flex-shrink: 0;
+    border-bottom: 2px solid var(--gray-5, #E0E0E0);
+    background: #FFF;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    width: 4.5rem;
+    height: 4.5rem;
+    flex-shrink: 0;
+    padding: 2rem;
+}
+
+.logo-text {
+    font-family: "Hitch Hike", serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 5px;
+    background: linear-gradient(180deg, #002C97 0%, #00E1FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-header {
+    display: flex;
+    height: 90%;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 5rem 0 2rem;
+}
+
+ul.NavigationMenu {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем отступы */
+}
+ul.NavigationMenu li, a {
+    text-decoration: none;
+    color: black;
+    display: inline-block; /* Элементы списка располагаются горизонтально */
+    margin-right: 3rem; /* Опционально: добавим небольшой отступ между элементами */
+    cursor: pointer;
+}
+ul.NavigationMenu a:hover {
+    color: #00E1FF;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Свечение с помощью тени */
+}

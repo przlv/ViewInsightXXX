@@ -1,0 +1,27 @@
+services:
+  - type: pserv
+    name: db
+    image: postgres:15
+    envVars:
+      - key: POSTGRES_DB
+        value: vixDatabase
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        value: 6678
+
+  - type: web
+    name: backend
+    build:
+      dockerfilePath: ./backend/Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://postgres:6678@db:5432/vixDatabase
+
+  - type: web
+    name: frontend
+    build:
+      dockerfilePath: ./frontend/Dockerfile
+    envVars:
+      - key: REACT_APP_BACKEND_URL
+        value: http://backend:8001

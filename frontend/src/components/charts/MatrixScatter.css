@@ -1,0 +1,9 @@
+.matrixChart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chartWrapper {
+    margin: 10px;
+}

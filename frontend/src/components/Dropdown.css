@@ -1,0 +1,44 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.selected-option {
+    cursor: pointer;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 2;
+}
+
+.options-list li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.options-list li:hover {
+    background-color: rgba(0, 225, 255, 0.1);
+}
+
+.dropdown:hover .options-list {
+    display: block;
+}
+
+.CaretDown {
+    margin-left: .3rem;
+    padding-top: .2rem;
+    color: rgba(128, 128, 128, 0.5);
+}

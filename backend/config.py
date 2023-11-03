@@ -1,0 +1,5 @@
+DATABASE_NAME = 'vixDatabase'
+USER = 'postgres'
+PASSWORD = '6678'
+HOST = 'db'
+PORT = '5432'

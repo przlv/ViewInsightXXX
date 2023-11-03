@@ -1,0 +1,97 @@
+.topbar, .filters {
+    margin: 2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+}
+
+.section {
+    margin: 2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 500px;
+    white-space: nowrap;
+}
+
+/* Стили для контейнера иконки */
+.search-container {
+    position: relative;
+    min-width: 300px;
+}
+
+/* Стили для иконки лупы */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* Стили для поля поиска */
+.search-input {
+    width: 150%;
+    padding: 8px 32px 8px 30px; /* Добавляем отступы, чтобы иконка не перекрывала текст */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.datasets-info {
+    margin: 0 3rem;
+    padding: 1rem 2rem 3.5rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    height: 2rem;
+}
+
+th {
+    padding-bottom: 1.5rem;
+}
+
+.arrow-filter {
+    font-size: 1rem;
+    color: rgba(128, 128, 128, 0.5);
+}
+
+.icon-dataset {
+    font-size: 1.5rem;
+}
+
+.element-ds {
+    transition: box-shadow 1s;
+}
+
+.element-ds:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(1, 227, 255, 0.3);
+}

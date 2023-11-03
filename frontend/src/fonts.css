@@ -1,0 +1,5 @@
+/* fonts.css */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./assets/fonts/Hitch-hike.otf') format('truetype');
+}
