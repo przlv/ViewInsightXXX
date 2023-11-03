@@ -13,7 +13,7 @@ services:
   - type: web
     name: backend
     build:
-      dockerfilePath: ./backend/Dockerfile
+      dockerfile: ./backend/Dockerfile
     envVars:
       - key: DATABASE_URL
         value: postgresql://postgres:6678@db:5432/vixDatabase
@@ -21,7 +21,7 @@ services:
   - type: web
     name: frontend
     build:
-      dockerfilePath: ./frontend/Dockerfile
+      dockerfile: ./frontend/Dockerfile
     envVars:
       - key: REACT_APP_BACKEND_URL
         value: http://backend:8001
