@@ -1,19 +1,25 @@
-version: 2
-
 services:
-- type: web
-  name: backend
-  env: docker
-  context: backend
-  envVars:
-  - key: DATABASE_URL
-    value: postgresql://postgres:6678@db:5432/vixDatabase
+  - type: web
+    name: db
+    runtime: docker
+    dockerfilePath: ./Dockerfile # здесь укажите путь к вашему Dockerfile для БД
+    envVars:
+      - key: POSTGRES_DB
+        value: vixDatabase
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        value: 6678
 
-- type: web
-  name: frontend
-  env: docker
-  context: frontend
+  - type: web
+    name: backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile # здесь укажите путь к вашему Dockerfile для бэкенда
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://postgres:6678@db:5432/vixDatabase
 
-databases:
-- name: db
-  type: postgres
+  - type: web
+    name: frontend
+    runtime: docker
+    dockerfilePath: ./frontend/Dockerfile # здесь укажите путь к вашему Dockerfile для фронтенда
