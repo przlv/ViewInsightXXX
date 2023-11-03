@@ -11,13 +11,6 @@ services:
       - key: POSTGRES_PASSWORD
         value: 6678
 
-  - type: web
-    name: backend
-    runtime: docker
-    dockerfilePath: ./backend/Dockerfile # здесь укажите путь к вашему Dockerfile для бэкенда
-    envVars:
-      - key: DATABASE_URL
-        value: postgresql://postgres:6678@db:5432/vixDatabase
 
   - type: web
     name: frontend
